@@ -1,24 +1,18 @@
 # React Book Store
 
-> A React project for the math-magicians app
+> The Bookstore is a website with two subpages: "Books" and "Categories." Which enables users to add and display book lists.
 ## Built With
 - React
-- router
 - redux
 ## Live Demo Link (comming soon)
 ## Getting Started
 
 **To get a local copy up clone the repo or download the full souce code**
 
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-clone the repo first using the following command:
-git clone https://github.com/yayner2002/react-math-magicians.git
-then run the following commands:
-  cd react-math-magicians
-  npm install
-  npm start
+- Clone the repository by running git clone git@github.com:yayner2002/react-book-store.git
+- Navigate to the folder cd react-book-store
+- Install packages by running npm install
+- Run the app by running npm start
 ## Authors
 
 👤 **yayner**
