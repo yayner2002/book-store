@@ -8,7 +8,6 @@ import Categories from './components/Categories';
 function App() {
   return (
     <Router>
-    <div className="App">
       <Nav />
        <div className='container'>
        <Routes>
@@ -17,7 +16,6 @@ function App() {
           <Route path='/categories' element={<Categories />} />
         </Routes>
        </div>
-    </div>
     </Router>
   );
 }
