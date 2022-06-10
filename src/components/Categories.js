@@ -2,8 +2,8 @@ import React from 'react';
 
 function Categories() {
   return (
-    <div>
-      <button type="button">Check status</button>
+    <div className="categories-container">
+      <button type="button" className="categories-btn">Check status</button>
     </div>
   );
 }

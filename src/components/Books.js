@@ -5,7 +5,7 @@ import AddBook from './AddBook';
 
 function Books() {
   const [book, setBook] = useState({
-    id:1,
+    id: 1,
     title: 'Title',
     author: 'Author',
   });
