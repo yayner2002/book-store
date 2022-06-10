@@ -1,33 +1,19 @@
 import '../App.css';
-// import Book from './Book';
+import { useState } from 'react';
+import Book from './Book';
+import AddBook from './AddBook';
 
 function Books() {
-  const bookList = [
-    {
-      id: 1,
-      title: 'html',
-      author: 'yay',
-    },
-    {
-      id: 2,
-      title: 'css',
-      author: 'yay',
-    },
-    {
-      id: 3,
-      title: 'database',
-      author: 'yay',
-    },
-  ];
+  const [book, setBook] = useState({
+    title: 'This is my first title',
+    author: 'this is sample author',
+  });
+  const { title, author } = book;
+
   return (
     <ul>
-      {bookList.map((book) => (
-        <li key={bookList.id}>
-          {book.title}
-          {' by '}
-          {book.author}
-        </li>
-      ))}
+      <Book title={title} author={author} />
+      <AddBook />
     </ul>
   );
 }

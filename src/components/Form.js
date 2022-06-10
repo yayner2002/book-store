@@ -2,10 +2,14 @@ import React from 'react';
 
 function Form() {
   return (
-    <form action="#">
-      <input type="text" name="title" placeholder="Enter Book Here" />
-      <input type="text" name="author" placeholder="Enter Book Author" />
-    </form>
+    <div className="form-container">
+      <h3>Add New Book Here</h3>
+      <form action="#">
+        <input type="text" name="titleEl" placeholder="Enter Book Here" />
+        <input type="text" name="authorEl" placeholder="Enter Book Author" />
+        <button className="submit-btn" type="button">Add Book</button>
+      </form>
+    </div>
   );
 }
 
