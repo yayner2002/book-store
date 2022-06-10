@@ -10,7 +10,6 @@
 
 **To get a local copy up clone the repo or download the full souce code**
 
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
