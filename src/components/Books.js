@@ -5,15 +5,20 @@ import AddBook from './AddBook';
 
 function Books() {
   const [book, setBook] = useState({
-    title: 'This is my first title',
-    author: 'this is sample author',
+    id:1,
+    title: 'Title',
+    author: 'Author',
   });
-  const { title, author } = book;
+  const addBook = () => {
+    setBook({
+      ...book, ...book,
+    });
+  };
 
   return (
     <ul>
-      <Book title={title} author={author} />
-      <AddBook />
+      <Book bookInfo={book} />
+      <AddBook handleAdd={addBook} />
     </ul>
   );
 }

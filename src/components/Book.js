@@ -2,13 +2,21 @@ import '../App.css';
 import React from 'react';
 
 function Book(props) {
-  // eslint-disable-next-line react/prop-types
-  const { title, author } = props;
+  const { id, title, author } = props.bookInfo;
   return (
     <li>
-      {title}
-      {author}
-      <button type="button">Delete</button>
+      <div className="bookItem">
+        {title}
+        { }
+        {' '}
+        by
+        {' '}
+        {' '}
+        {author}
+        <button type="button" className="delete-btn">
+          Delete
+        </button>
+      </div>
     </li>
   );
 }
