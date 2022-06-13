@@ -2,7 +2,7 @@ import * as actions from './actionTypes';
 
 let lastId = 0;
 // reducer
-export default function reducer(state = [], action) {
+export default function booksReducer(state = [], action) {
   switch (action.type) {
     case actions.BOOK_ADDED:
       return [

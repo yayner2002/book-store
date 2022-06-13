@@ -10,7 +10,7 @@ export const checkStatus = () => ({
 });
 
 // reducer
-export default function reducer(state = defaultState, action) {
+export default function categoriersReducer(state = defaultState, action) {
   switch (actions.type) {
     case actions.CHECK_STATUS:
       return action.payload.description;
