@@ -1,13 +1,7 @@
 import * as actions from './actionTypes';
 
 let lastId = 0;
-export const bookAdded = (title, author) => ({
-  type: actions.BOOK_ADDED,
-  payload: {
-    title,
-    author,
-  },
-});
+// reducer
 export default function reducer(state = [], action) {
   switch (action.type) {
     case actions.BOOK_ADDED:
@@ -26,3 +20,19 @@ export default function reducer(state = [], action) {
       return state;
   }
 }
+// action creators
+
+export const bookAdded = (title, author) => ({
+  type: actions.BOOK_ADDED,
+  payload: {
+    title,
+    author,
+  },
+});
+
+export const bookRemoved = (id) => ({
+  type: actions.BOOK_REMOVED,
+  payload: {
+    id,
+  },
+});
