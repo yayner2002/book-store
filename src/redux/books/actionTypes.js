@@ -1,2 +1,2 @@
-export const BOOK_ADDED = 'bookAdded';
-export const BOOK_REMOVED = 'bookRemoved';
+export const ADD_BOOK = './bookstore/books/ADD_BOOK';
+export const REMOVE_BOOK = './bookstore/books/REMOVE_BOOK';
