@@ -23,7 +23,7 @@ export default function booksReducer(state = [], action) {
 // action creators
 
 export const bookAdded = (title, author) => ({
-  type: actions.BOOK_ADDED,
+  type: actions.ADD_BOOK,
   payload: {
     title,
     author,
@@ -31,6 +31,6 @@ export const bookAdded = (title, author) => ({
 });
 
 export const bookRemoved = (id) => ({
-  type: actions.BOOK_REMOVED,
+  type: actions.REMOVE_BOOK,
   payload: id,
 });
