@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 
-let lastId = 0;
+const lastId = 0;
 // reducer
 export default function booksReducer(state = [], action) {
   switch (action.type) {
@@ -8,8 +8,7 @@ export default function booksReducer(state = [], action) {
       return [
         ...state,
         {
-          // eslint-disable-next-line no-plusplus
-          id: ++lastId,
+          id: lastId + 1,
           title: action.payload.title,
           author: action.payload.author,
         },
