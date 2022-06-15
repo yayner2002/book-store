@@ -1,16 +1,14 @@
 import * as actions from './actionTypes';
-
-const lastId = 0;
+import initialData from './initialData';
 // reducer
-export default function booksReducer(state = [], action) {
+export default function booksReducer(state = initialData, action) {
   switch (action.type) {
     case actions.ADD_BOOK:
       return [
         ...state,
         {
-          id: lastId + 1,
-          title: action.payload.title,
-          author: action.payload.author,
+          id: state.length + 1,
+          ...action.payload,
         },
       ];
     case actions.REMOVE_BOOK:
@@ -20,13 +18,9 @@ export default function booksReducer(state = [], action) {
   }
 }
 // action creators
-
-export const bookAdded = (title, author) => ({
+export const bookAdded = (book) => ({
   type: actions.ADD_BOOK,
-  payload: {
-    title,
-    author,
-  },
+  payload: book,
 });
 
 export const bookRemoved = (id) => ({
