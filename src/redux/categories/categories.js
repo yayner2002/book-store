@@ -1,18 +1,16 @@
 import CHECK_STATUS from './actionTypes';
+import initialData from './initialData';
 
 // actions creators
 export const checkStatus = () => ({
   type: CHECK_STATUS,
-  payload: {
-    description: 'Under construction',
-  },
 });
 
 // reducer
-export default function categoriersReducer(state = [], action) {
+export default function categoriersReducer(state = initialData, action) {
   switch (action.type) {
     case CHECK_STATUS:
-      return action.payload.description;
+      return state;
     default:
       return state;
   }

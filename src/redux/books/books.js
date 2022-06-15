@@ -18,12 +18,9 @@ export default function booksReducer(state = initialData, action) {
   }
 }
 // action creators
-
 export const bookAdded = (book) => ({
   type: actions.ADD_BOOK,
-  payload: {
-    book,
-  },
+  payload: book,
 });
 
 export const bookRemoved = (id) => ({

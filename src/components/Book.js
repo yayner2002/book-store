@@ -14,22 +14,22 @@ function Book() {
   };
   return (
     <li className="bookList">
-      <div className="singleBookContainer">
+      <div className="bookContainer">
         <span>
           {bookList.map((book) => (
-            <div key={book.id} className="singleBook">
+            <div key={book.id} className="eachbook">
               {book.title}
               {' '}
               :
-              {' '}
               {book.author}
               <button
                 type="button"
+                className="delete"
                 onClick={() => {
                   handleDelete(book.id);
                 }}
               >
-                Delete Book
+                Delete
               </button>
             </div>
           ))}

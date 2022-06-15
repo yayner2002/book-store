@@ -9,5 +9,4 @@ const rootReducer = combineReducers({
 });
 
 const store = configureStore({ reducer: rootReducer });
-// export default createStore((state, action) => rootReducer(state, action), initialData);
 export default store;
