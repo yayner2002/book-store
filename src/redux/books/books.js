@@ -1,8 +1,9 @@
 import * as actions from './actionTypes';
+// import books from './initialData';
 
 const lastId = 0;
 // reducer
-export default function booksReducer(state = [], action) {
+export default function booksReducer(state = null, action) {
   switch (action.type) {
     case actions.ADD_BOOK:
       return [
@@ -21,11 +22,10 @@ export default function booksReducer(state = [], action) {
 }
 // action creators
 
-export const bookAdded = (title, author) => ({
+export const bookAdded = (book) => ({
   type: actions.ADD_BOOK,
   payload: {
-    title,
-    author,
+    book,
   },
 });
 
