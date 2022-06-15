@@ -2,6 +2,9 @@
 /* eslint-disable react/prop-types */
 import '../App.css';
 import React from 'react';
+import { useDispatch, useSelector} from 'react-redux';
+import { bookRemoved } from '../redux/books/books';
+
 
 function Book(props) {
   const { id, title, author } = props.bookInfo;

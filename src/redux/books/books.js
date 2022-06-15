@@ -1,7 +1,6 @@
 import * as actions from './actionTypes';
-
+import initialData from './initialData';
 // reducer
-const initialData = [];
 export default function booksReducer(state = initialData, action) {
   switch (action.type) {
     case actions.ADD_BOOK:
