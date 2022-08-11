@@ -1,0 +1,31 @@
+nav {
+  padding: 20px 5%;
+  box-shadow: 0 0 20px rgba(7, 7, 7, 0.5);
+  background: #fff;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.flex-left {
+  flex: 1;
+  color: #0290ff;
+  font-weight: bold;
+  font-size: 35px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.nav-links {
+  justify-content: flex-end;
+  padding-left: 2%;
+  list-style: none;
+  font-size: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: #9e9ea7;
+}
