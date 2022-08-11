@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
+import './styles/Nav.css';
 
-function Nav() {
+const Nav = () => {
   const navStyle = {
     color: '#9e9ea7',
     textDecoration: 'none',
@@ -22,6 +23,6 @@ function Nav() {
       </ul>
     </nav>
   );
-}
+};
 
 export default Nav;

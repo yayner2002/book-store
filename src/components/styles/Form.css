@@ -1,0 +1,36 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  background-color: #fff;
+  padding: 15px;
+}
+
+.form-container h3 {
+  color: #888;
+}
+
+.my-form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  flex: 1;
+  margin-top: 10px;
+}
+
+.my-form input {
+  padding: 8px;
+  outline: none;
+}
+
+.my-form button {
+  padding: 8px;
+  outline: none;
+  border: none;
+  background-color: #0290ff;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+}

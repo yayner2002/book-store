@@ -3,7 +3,7 @@ import { useState } from 'react';
 import Book from './Book';
 import AddBook from './AddBook';
 
-function Books() {
+const Books = () => {
   const [book, setBook] = useState({
     id: 1,
     title: 'Title',
@@ -21,6 +21,6 @@ function Books() {
       <AddBook handleAdd={addBook} />
     </ul>
   );
-}
+};
 
 export default Books;

@@ -1,0 +1,27 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+.bookList {
+  list-style: none;
+  padding: 10px;
+  display: block;
+  margin: 10px auto;
+  background-color: #fff;
+}
+
+.bookItem span {
+  margin-right: 5px;
+  width: 100%;
+}
+
+.delete-btn {
+  background-color: coral;
+  padding: 5px 10px;
+  outline: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}

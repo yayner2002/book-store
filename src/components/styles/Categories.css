@@ -1,0 +1,9 @@
+.categories-btn {
+  padding: 8px 15px;
+  border: none;
+  outline: none;
+  background-color: #0290ff;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+}
