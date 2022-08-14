@@ -46,4 +46,8 @@
     padding: 10px;
     padding-left: 0%;
   }
+
+  .delete-btn {
+    width: 20%;
+  }
 }
