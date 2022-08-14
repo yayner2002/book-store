@@ -29,13 +29,14 @@
 
 .delete-btn {
   background-color: coral;
-  padding: 5px 10px;
+  padding: 5px 8px;
   outline: none;
   border: none;
   font-size: 16px;
   cursor: pointer;
-  width: 100px;
+  width: 8%;
   margin-top: 0.5rem;
+  color: #fff;
 }
 
 @media (max-width: 500px) {
