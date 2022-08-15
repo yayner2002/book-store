@@ -1,26 +1,16 @@
+import { v4 as uuidv4 } from 'uuid';
 import * as actions from './actionTypes';
 
-const initBooks = [
-  {
-    id: 1,
-    title: 'Introduction to React',
-    author: 'Jordan Walke',
-  },
-  {
-    id: 2,
-    title: 'React for Beginners',
-    author: 'Maximilian Schwarzmuller',
-  },
-];
+const initBooks = [];
 
 // const initID = 0;
 const bookReducer = (state = initBooks, action) => {
   switch (action.type) {
     case actions.ADD_BOOK:
       return [
-        ...initBooks,
+        ...state,
         {
-          id: 2,
+          id: uuidv4(),
           title: action.payload.title,
           author: action.payload.author,
         },
@@ -36,7 +26,6 @@ export default bookReducer;
 export const addBook = (title, author) => ({
   type: actions.ADD_BOOK,
   payload: {
-    id: 2,
     title,
     author,
   },
