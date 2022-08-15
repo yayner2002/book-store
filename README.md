@@ -4,7 +4,8 @@
 ## Built With
 - React
 - redux
-## Live Demo Link (comming soon)
+## Live Demo Link
+[https://yay-book-store.netlify.app/books]
 ## Getting Started
 
 **To get a local copy up clone the repo or download the full souce code**
