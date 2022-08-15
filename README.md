@@ -5,7 +5,8 @@
 - React
 - redux
 ## Live Demo Link
-[https://yay-book-store.netlify.app/books]
+
+[netlify](https://yay-book-store.netlify.app/)
 ## Getting Started
 
 **To get a local copy up clone the repo or download the full souce code**
