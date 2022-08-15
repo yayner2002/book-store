@@ -12,16 +12,42 @@
   background-color: #fff;
 }
 
-.bookItem span {
-  margin-right: 5px;
-  width: 100%;
+.bookItem {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.bookItem h3 {
+  color: #121212;
+}
+
+.bookItem small {
+  color: #9fc1de;
 }
 
 .delete-btn {
   background-color: coral;
-  padding: 5px 10px;
+  padding: 5px 8px;
   outline: none;
   border: none;
   font-size: 16px;
   cursor: pointer;
+  width: 8%;
+  margin-top: 0.5rem;
+  color: #fff;
+}
+
+@media (max-width: 500px) {
+  .bookList {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-left: 0%;
+  }
+
+  .delete-btn {
+    width: 20%;
+  }
 }

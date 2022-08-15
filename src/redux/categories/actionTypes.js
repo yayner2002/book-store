@@ -1,2 +1,2 @@
-const CHECK_STATUS = './bookstore/categories/CHECK_STATUS';
+const CHECK_STATUS = 'CHECK_STATUS';
 export default CHECK_STATUS;

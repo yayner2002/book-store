@@ -29,3 +29,11 @@ nav {
   grid-template-columns: 1fr 1fr;
   color: #9e9ea7;
 }
+
+@media (max-width: 375px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
