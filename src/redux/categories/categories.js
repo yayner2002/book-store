@@ -1,6 +1,6 @@
 import CHECK_STATUS from './actionTypes';
 
-const categoriesReducer = (state = 'Under Construction', action) => {
+const categoriesReducer = (state = '', action) => {
   switch (action.type) {
     case CHECK_STATUS:
       return action.payload;
