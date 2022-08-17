@@ -1,20 +1,25 @@
-import { v4 as uuidv4 } from 'uuid';
+/* eslint-disable no-case-declarations */
+// import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
 import * as actions from './actionTypes';
 
+const apiKey = 'GOcPcKv5z4FEHRxAelc7';
+const apiEndPoint = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
 const initBooks = [];
 
-// const initID = 0;
+export const addBook = (book) => ({
+  type: actions.ADD_BOOK,
+  payload: book,
+});
+
 const bookReducer = (state = initBooks, action) => {
   switch (action.type) {
     case actions.ADD_BOOK:
-      return [
-        ...state,
-        {
-          id: uuidv4(),
-          title: action.payload.title,
-          author: action.payload.author,
-        },
-      ];
+      const books = Object.entries(action.payload);
+      return books.map((book) => ({
+        id: book[0],
+        ...book[1][0],
+      }));
     case actions.REMOVE_BOOK:
       return state.filter((book) => book.id !== action.payload.id);
     default:
@@ -23,13 +28,11 @@ const bookReducer = (state = initBooks, action) => {
 };
 export default bookReducer;
 
-export const addBook = (newBook) => ({
-  type: actions.ADD_BOOK,
-  payload: {
-    title: newBook.title,
-    author: newBook.auhtor,
-  },
-});
+export const fetchBook = () => async (dispatch) => {
+  await axios.get(`${apiEndPoint}/${apiKey}/books`)
+    .then((response) => dispatch(addBook(response.data)),
+      (err) => dispatch({ type: actions.BOOK_FAILED, payload: err }));
+};
 
 export const removeBook = (id) => ({
   type: actions.REMOVE_BOOK,
