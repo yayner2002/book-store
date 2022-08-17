@@ -1,7 +1,8 @@
 import React from 'react';
 import './styles/Form.css';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/books';
+import { v4 as uuidv4 } from 'uuid';
+import { postBook } from '../redux/books/books';
 
 const Form = () => {
   const dispatch = useDispatch();
@@ -9,10 +10,12 @@ const Form = () => {
   const handleAdd = (e) => {
     e.preventDefault();
     const newBook = {
+      item_id: uuidv4(),
       title: e.target.title.value.trim(),
       author: e.target.author.value.trim(),
+      category: 'Action',
     };
-    dispatch(addBook(newBook));
+    dispatch(postBook(newBook));
     e.target.reset();
   };
   return (

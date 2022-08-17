@@ -18,7 +18,7 @@ export const postBook = (book) => async (dispatch) => {
     headers: {
       'Content-Type': 'application/json',
     },
-    body: book,
+    body: JSON.stringify(book),
   })
     .then((response) => response.json())
     .then(() => dispatch(addBook()));
