@@ -23,11 +23,11 @@ const bookReducer = (state = initBooks, action) => {
 };
 export default bookReducer;
 
-export const addBook = (title, author) => ({
+export const addBook = (newBook) => ({
   type: actions.ADD_BOOK,
   payload: {
-    title,
-    author,
+    title: newBook.title,
+    author: newBook.auhtor,
   },
 });
 
