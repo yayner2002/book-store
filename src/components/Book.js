@@ -20,6 +20,7 @@ const Book = () => {
     book.map((bookEl) => (
       <li key={bookEl.id} className="bookList">
         <div className="bookItem">
+          <p className="BookCategory">{bookEl.category}</p>
           <h3>{bookEl.title}</h3>
           <small>{bookEl.author}</small>
           <button
