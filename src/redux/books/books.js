@@ -1,39 +1,53 @@
-import { v4 as uuidv4 } from 'uuid';
-import * as actions from './actionTypes';
+/* eslint-disable max-len */
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-case-declarations */
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const initBooks = [];
+const apiKey = 'GOcPcKv5z4FEHRxAelc7';
+const apiEndPoint = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps';
 
-// const initID = 0;
-const bookReducer = (state = initBooks, action) => {
-  switch (action.type) {
-    case actions.ADD_BOOK:
-      return [
-        ...state,
-        {
-          id: uuidv4(),
-          title: action.payload.title,
-          author: action.payload.author,
-        },
-      ];
-    case actions.REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload.id);
-    default:
-      return state;
-  }
-};
-export default bookReducer;
-
-export const addBook = (title, author) => ({
-  type: actions.ADD_BOOK,
-  payload: {
-    title,
-    author,
+export const fetchBooks = createAsyncThunk(
+  'fetchBook',
+  async () => {
+    const response = await axios.get(`${apiEndPoint}/${apiKey}/books`);
+    return response.data;
   },
+);
+
+export const postBook = createAsyncThunk('postBook', async (book) => {
+  const response = await axios.post(`${apiEndPoint}/${apiKey}/books`, {
+    item_id: book.item_id,
+    title: book.title,
+    author: book.author,
+    category: book.category,
+  });
+  return response.data;
 });
 
-export const removeBook = (id) => ({
-  type: actions.REMOVE_BOOK,
-  payload: {
-    id,
+export const removeBook = createAsyncThunk('removeBook', async (id) => {
+  const response = await axios.delete(`${apiEndPoint}/${apiKey}/books/${id}`);
+  return response.data;
+});
+
+const initialState = [];
+const booksSlice = createSlice({
+  name: 'books',
+  initialState,
+  extraReducers: {
+    [fetchBooks.fulfilled]: (state, action) => {
+      window.console.log(`api data ${action.payload}, ${state.books}`);
+      const books = Object.keys(action.payload)
+        .map((instance) => ({
+          item_id: instance,
+          ...action.payload[instance][0],
+        }));
+      return [books];
+    },
+    [postBook.fulfilled]: (state, action) => [...state, action.payload],
+    [removeBook.fulfilled]: (state, action) => [...state.filter((book) => book.item_id !== action.payload.item_id)],
+
   },
 });
+export default booksSlice.reducer;

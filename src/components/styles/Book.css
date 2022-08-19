@@ -21,6 +21,7 @@
 
 .bookItem h3 {
   color: #121212;
+  font-size: 25px;
 }
 
 .bookItem small {
@@ -34,12 +35,17 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
-  width: 8%;
+  width: 15%;
   margin-top: 0.5rem;
   color: #fff;
 }
 
-@media (max-width: 500px) {
+.BookCategory {
+  color: #888;
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
   .bookList {
     display: flex;
     flex-direction: column;
@@ -48,6 +54,6 @@
   }
 
   .delete-btn {
-    width: 20%;
+    width: 40%;
   }
 }

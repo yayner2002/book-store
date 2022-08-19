@@ -1,18 +1,29 @@
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchBooks } from '../redux/books/books';
 import '../App.css';
-// import { useState } from 'react';
-import { useSelector } from 'react-redux';
 import Book from './Book';
 import AddBook from './AddBook';
-import { addBook } from '../redux/books/books';
 
 const Books = () => {
-  const book = useSelector((state) => state.book);
+  const books = useSelector((state) => state.books);
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [books.length]);
 
+  if (books.length) {
+    return (
+      <ul>
+        {books[0].map((book) => <Book key={book.item_id} book={book} />)}
+        <AddBook />
+      </ul>
+    );
+  }
   return (
-    <ul>
-      <Book bookInfo={book} />
-      <AddBook handleAdd={addBook} />
-    </ul>
+    <>
+      <h1>Loading...</h1>
+    </>
   );
 };
 
