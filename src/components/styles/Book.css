@@ -7,9 +7,63 @@
 .bookList {
   list-style: none;
   padding: 10px;
-  display: block;
-  margin: 10px auto;
   background-color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 1rem auto;
+  border-radius: 1rem;
+  gap: 10rem;
+}
+
+.completed {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.percent {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.chapter {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding-left: 15%;
+  border-left: 1px solid darkgray;
+}
+
+.update-progress-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: #0290ff;
+  outline: none;
+  border: none;
+  color: #fff;
+  margin-top: 1.5rem;
+}
+
+.current-chapter {
+  color: #acacac;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.chpater-number {
+  color: #6b6b6b;
+}
+
+.actual-percent {
+  color: #121212;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.completed-text {
+  color: #121212;
 }
 
 .bookItem {
@@ -28,16 +82,22 @@
   color: #9fc1de;
 }
 
-.delete-btn {
-  background-color: coral;
-  padding: 5px 8px;
+.btn-collection {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex: 1;
+  padding: 0.5rem 0;
+}
+
+.btn-collection button {
   outline: none;
   border: none;
-  font-size: 16px;
-  cursor: pointer;
-  width: 15%;
-  margin-top: 0.5rem;
-  color: #fff;
+  color: #689ecb;
+  padding: 0.5rem 1rem;
+  font-size: 15px;
+  margin-right: 0.5rem;
+  border-right: 2px solid #f0eff0;
 }
 
 .BookCategory {
@@ -55,5 +115,9 @@
 
   .delete-btn {
     width: 40%;
+  }
+
+  .chapter .current-chapter {
+    margin-top: 1rem;
   }
 }

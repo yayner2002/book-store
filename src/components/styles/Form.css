@@ -20,36 +20,43 @@
   gap: 15px;
   flex: 1;
   margin-top: 10px;
+  width: 100%;
 }
 
 .my-form input {
-  padding: 15px;
+  padding: 20px;
   outline: none;
   border: #fafafa;
+  flex: 1;
 }
 
 .my-form .selectCategory {
-  padding: 15px;
+  padding: 20px;
   outline: none;
   border: #fafafa;
+  width: 100%;
+  flex: 2;
 }
 
 .my-form .selectCategory option {
   outline: none;
   border: none;
+  padding: 25px 0;
+  font-size: 18px;
 }
 
 .my-form button {
-  padding: 13px;
+  padding: 20px;
   outline: none;
   border: none;
   background-color: #0290ff;
   cursor: pointer;
   font-size: 16px;
   color: #fff;
+  flex: 1;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 700px) {
   .my-form {
     display: grid;
     grid-template-columns: repeat(1, 1fr);

@@ -13,7 +13,7 @@ const Form = () => {
       item_id: uuidv4(),
       title: e.target.title.value.trim(),
       author: e.target.author.value.trim(),
-      category: 'Action',
+      category: e.target.category.value.trim(),
     };
     dispatch(postBook(newBook));
     e.target.reset();
@@ -25,6 +25,7 @@ const Form = () => {
         <input type="text" name="title" placeholder="Book title" id="title" required />
         <input type="text" name="author" placeholder="Book Author" id="author" required />
         <select name="category" id="category" className="selectCategory">
+          <option>Select Category...</option>
           <option value="Technology">Technology</option>
           <option value="Fiction">Fiction</option>
           <option value="Adventure">Adventure</option>
