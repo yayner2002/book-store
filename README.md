@@ -4,6 +4,10 @@
 ## Built With
 - React
 - redux
+
+## Screenshot
+![mobile version](/public/mobile.png?raw=true "mobile version")
+![desktop version](/public/desktop.png?raw=true "desktop version")
 ## Live Demo Link
 
 [netlify](https://yay-book-store.netlify.app/)

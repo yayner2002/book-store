@@ -19,7 +19,7 @@
 .completed {
   display: flex;
   justify-content: flex-start;
-  align-items: baseline;
+  align-items: center;
   gap: 1.5rem;
 }
 
@@ -112,5 +112,9 @@
 
   .delete-btn {
     width: 40%;
+  }
+
+  .chapter .current-chapter {
+    margin-top: 1rem;
   }
 }
