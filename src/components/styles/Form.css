@@ -34,6 +34,11 @@
   border: #fafafa;
 }
 
+.my-form .selectCategory option {
+  outline: none;
+  border: none;
+}
+
 .my-form button {
   padding: 13px;
   outline: none;

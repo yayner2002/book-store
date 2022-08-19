@@ -22,7 +22,7 @@ const Books = () => {
   }
   return (
     <>
-      <h1>There are no books to view.</h1>
+      <h1>Loading...</h1>
     </>
   );
 };
