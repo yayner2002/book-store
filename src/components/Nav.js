@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
 import './styles/Nav.css';
+import login from '../images/login.png';
 
 const Nav = () => {
   const navStyle = {
@@ -21,6 +22,11 @@ const Nav = () => {
           <li>Categories</li>
         </Link>
       </ul>
+      <div className="login">
+        <Link to="/" style={navStyle}>
+          <img src={login} alt="Book. logo" />
+        </Link>
+      </div>
     </nav>
   );
 };

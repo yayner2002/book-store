@@ -6,8 +6,8 @@
 - redux
 
 ## Screenshot
-![mobile version](/public/mobile.png?raw=true "mobile version")
-![desktop version](/public/desktop.png?raw=true "desktop version")
+![mobile version](/src/images/mobile.png?raw=true "mobile version")
+![desktop version](/src/images/desktop.png?raw=true "desktop version")
 ## Live Demo Link
 
 [netlify](https://yay-book-store.netlify.app/)

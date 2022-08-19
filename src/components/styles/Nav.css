@@ -10,6 +10,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  flex-wrap: wrap;
 }
 
 .flex-left {
@@ -21,13 +22,23 @@ nav {
 }
 
 .nav-links {
-  justify-content: flex-end;
-  padding-left: 2%;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: 40rem;
+  color: #9e9ea7;
   list-style: none;
   font-size: 18px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  color: #9e9ea7;
+  gap: 3rem;
+}
+
+.login {
+  display: flex;
+  align-self: flex-end;
+}
+
+.login img {
+  width: 80px;
+  height: 60px;
 }
 
 @media (max-width: 375px) {
@@ -35,5 +46,9 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+  }
+
+  .login {
+    justify-self: flex-start;
   }
 }

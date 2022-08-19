@@ -9,11 +9,12 @@
   padding: 10px;
   background-color: #fff;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   margin: 1rem auto;
   border-radius: 1rem;
+  gap: 10rem;
 }
 
 .completed {
@@ -32,6 +33,8 @@
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.5rem;
+  padding-left: 15%;
+  border-left: 1px solid darkgray;
 }
 
 .update-progress-btn {
