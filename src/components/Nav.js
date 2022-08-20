@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import React from 'react';
-import './styles/Nav.css';
-import login from '../images/login.png';
+import '../assets/styles/Nav.css';
+import login from '../assets/images/login.png';
 
 const Nav = () => {
   const navStyle = {

@@ -1,4 +1,4 @@
-import './styles/Book.css';
+import '../assets/styles/Book.css';
 import { useDispatch } from 'react-redux';
 import { Progress } from 'antd';
 import { removeBook } from '../redux/books/books';
