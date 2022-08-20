@@ -106,18 +106,22 @@
 }
 
 @media (max-width: 600px) {
-  .bookList {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-    padding-left: 0%;
-  }
-
   .delete-btn {
     width: 40%;
   }
 
   .chapter .current-chapter {
     margin-top: 1rem;
+  }
+
+  .bookList {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .chapter {
+    border: none;
+    padding-left: 0%;
   }
 }

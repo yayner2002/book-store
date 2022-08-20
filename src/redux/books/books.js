@@ -37,7 +37,6 @@ const booksSlice = createSlice({
   initialState,
   extraReducers: {
     [fetchBooks.fulfilled]: (state, action) => {
-      window.console.log(`api data ${action.payload}, ${state.books}`);
       const books = Object.keys(action.payload)
         .map((instance) => ({
           item_id: instance,

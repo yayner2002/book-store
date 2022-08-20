@@ -11,6 +11,8 @@ nav {
   justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .flex-left {
@@ -43,12 +45,25 @@ nav {
 
 @media (max-width: 375px) {
   nav {
-    display: flex;
+    display: grid;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: baseline;
+    gap: 10px;
   }
 
   .login {
-    justify-self: flex-start;
+    display: flex;
+    align-self: flex-end;
+    margin-right: 5px;
+  }
+
+  .login img {
+    width: 50px;
+    height: 40px;
+  }
+
+  .nav-links {
+    margin-right: 0;
   }
 }
