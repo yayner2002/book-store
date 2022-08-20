@@ -6,9 +6,8 @@
 - redux
 
 ## Screenshot
-Desktop
+
 ![mobile version](/src/assets/images/mobile.png?raw=true "mobile version")
-Mobile
 ![desktop version](/src/assets/images/desktop.png?raw=true "desktop version")
 ## Live Demo Link
 
