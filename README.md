@@ -7,8 +7,7 @@
 
 ## Screenshot
 
-![mobile version](/src/assets/images/mobile.png?raw=true "mobile version")
-![desktop version](/src/assets/images/desktop.png?raw=true "desktop version")
+![mock version](/src/assets/images/booksstore.png?raw=true "mock version")
 ## Live Demo Link
 
 [netlify](https://yay-book-store.netlify.app/)
